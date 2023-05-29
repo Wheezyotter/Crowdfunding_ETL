@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS category;
 DROP TABLE IF EXISTS sub_category;
 DROP TABLE IF EXISTS campaigns;
 
+-- Creates contacts table
 CREATE TABLE contacts (
 	contact_id INT PRIMARY KEY NOT NULL,
 	first_name VARCHAR(60) NOT NULL,
@@ -11,17 +12,20 @@ CREATE TABLE contacts (
 	email VARCHAR(60) NOT NULL
 );
 
+-- Crates category table
 CREATE TABLE category (
 	category_id VARCHAR(4) PRIMARY KEY NOT NULL,
 	category VARCHAR(30) NOT NULL
 	
 );
 
+-- creates sub-category table
 CREATE TABLE sub_category (
 	subcategory_id VARCHAR(10) PRIMARY KEY NOT NULL,
 	subcategory VARCHAR(30) NOT NULL
 );
 
+--Creates campaigns table
 CREATE TABLE campaigns (
 	cf_id INT PRIMARY KEY NOT NULL, 
 	contact_id INT NOT NULL, 
@@ -42,6 +46,7 @@ CREATE TABLE campaigns (
 	FOREIGN KEY (subcategory_id) REFERENCES sub_category(subcategory_id)
 );
 
+-- Selects and displays each table to confirm import success
 SELECT *
 FROM contacts;
 
