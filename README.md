@@ -14,5 +14,7 @@ Data was imported from crowdfunding.xlsx found in the Resources folder. Data typ
 ### Database schema
 A database was created in pgAdmin4 to store crowdfunding information. Table schema was planned using QuickDBD. Tables were then created using the postgresql query tool and saved as crowd_funding_db_schema.sql. Data was imported using the CSV files found in the Resources folder.
 
+![DBD](crowdfunding_ERD.png)
+
 ---
 Authors - Giulio Chiappolini and Jake Pohs
